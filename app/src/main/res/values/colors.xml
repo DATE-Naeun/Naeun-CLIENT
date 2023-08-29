@@ -22,5 +22,6 @@
     <color name="gray05">#F4F4F4</color>
 
     <color name="gray88">#888888</color>
+    <color name="gray_hint">#CACACA</color>
 
 </resources>

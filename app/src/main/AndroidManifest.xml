@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.naeun_android">
-    
+
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -31,6 +31,10 @@
                     android:scheme="kakao${NATIVE_APP_KEY}" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".presentation.SetNicknameActivity"
+            android:exported="false" />
+        <activity
             android:name=".presentation.LoginActivity"
             android:exported="false" />
         <activity

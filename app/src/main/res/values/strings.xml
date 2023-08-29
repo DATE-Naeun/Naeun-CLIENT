@@ -8,4 +8,11 @@
     <string name="contact_team">문의하기</string>
     <string name="confirm_terms">약관확인</string>
 
+    <!-- Set nickname activity -->
+    <string name="nickname_setting_description">선택한 소셜 계정으로\n가입을 진행합니다.</string>
+    <string name="nickname">닉네임</string>
+    <string name="nickname_hint">한글/영어 최대 7자 이내</string>
+    <string name="duplication_check">중복확인</string>
+    <string name="input_done">입력완료</string>
+
 </resources>
