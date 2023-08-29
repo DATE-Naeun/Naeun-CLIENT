@@ -7,6 +7,9 @@ plugins {
     id 'org.jetbrains.kotlin.plugin.serialization' version '1.7.20'
 }
 
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
 android {
     namespace 'com.naeun_android'
     compileSdk 33
@@ -19,7 +22,11 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField "String", "KAKAO_NATIVE_APP_KEY", properties["KAKAO_NATIVE_APP_KEY"]
+        manifestPlaceholders["NATIVE_APP_KEY"] = properties["KAKAO_NATIVE_APP_KEY_NO_QUOTES"]
     }
+
 
     buildTypes {
         release {
@@ -30,6 +37,7 @@ android {
     buildFeatures {
         dataBinding = true
         viewBinding = true
+        buildConfig = true
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
@@ -88,4 +96,7 @@ dependencies {
 
     // Lottie
     implementation 'com.airbnb.android:lottie:5.2.0'
+
+    // Kakaologin
+    implementation 'com.kakao.sdk:v2-user:2.11.0'
 }

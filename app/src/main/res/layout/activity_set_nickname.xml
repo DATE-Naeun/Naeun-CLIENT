@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="23dp"
+        tools:context=".presentation.SetNicknameActivity">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/ic_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_kakao_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="44dp"
+            android:src="@drawable/ic_logo_kakao"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_back" />
+
+        <TextView
+            android:id="@+id/tv_nickname_setting_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:letterSpacing="0.1"
+            android:text="@string/nickname_setting_description"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_kakao_logo" />
+
+        <TextView
+            android:id="@+id/tv_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="31dp"
+            android:letterSpacing="0.1"
+            android:text="@string/nickname"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_nickname_setting_description" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_nickname"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:hint="@string/nickname_hint"
+            android:inputType="text"
+            android:letterSpacing="0.1"
+            android:maxLength="7"
+            android:paddingStart="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray_hint"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@id/btn_duplication_check"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_nickname" />
+
+        <TextView
+            android:id="@+id/btn_duplication_check"
+            android:layout_width="82dp"
+            android:layout_height="27dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="3dp"
+            android:background="@drawable/shape_gray_stroke_radius_20dp"
+            android:letterSpacing="0.1"
+            android:paddingTop="3dp"
+            android:stateListAnimator="@null"
+            android:text="@string/duplication_check"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_nickname" />
+
+        <ImageView
+            android:id="@+id/iv_duplication_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/selector_nickname_check"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_nickname" />
+
+        <TextView
+            android:id="@+id/tv_duplication_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:letterSpacing="0.1"
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/iv_duplication_check"
+            app:layout_constraintStart_toEndOf="@id/iv_duplication_check"
+            app:layout_constraintTop_toTopOf="@id/iv_duplication_check"
+            tools:text="사용 가능한 닉네임입니다." />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_input_done"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="22dp"
+            android:background="@drawable/shape_main_radius_10dp"
+            android:enabled="true"
+            android:letterSpacing="0.1"
+            android:stateListAnimator="@null"
+            android:text="@string/input_done"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
