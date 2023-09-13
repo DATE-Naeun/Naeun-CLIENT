@@ -66,6 +66,11 @@ class SelectSkinTypeActivity :
         binding.tlSelectQuestion.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab) {
                 binding.viewpager2SelectSkinType.currentItem = tab.position
+
+                when(tab.position) {
+                    0 -> binding.btnNext.text = "삭제하기"
+                    else -> binding.btnNext.text = "질문지로 선택 바로가기"
+                }
             }
 
             override fun onTabUnselected(tab: TabLayout.Tab) {}
