@@ -22,7 +22,7 @@ class SelectSkinTypeDifficultFragment : BindingFragment<FragmentSelectSkinTypeDi
 
     private fun setupTextView() {
         val titleText = binding.tvQuestionnaireTitle
-        val fullText = "질문지로 선택 시\n정확한 피부타입 검사 결과를 받을 수 있어요"
+        val fullText = getString(R.string.skin_type_difficult_title)
         val spannableString = SpannableString(fullText)
         val startIndex = fullText.indexOf("정확한 피부타입 검사 결과")
         val endIndex = startIndex + "정확한 피부타입 검사 결과".length

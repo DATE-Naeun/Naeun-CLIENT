@@ -26,7 +26,7 @@ class SelectSkinTypeActivity :
 
     private fun setupTextView() {
         val titleText = binding.tvSkinTypeTitle
-        val fullText = "00님의\n피부타입을\n선택해주세요."
+        val fullText = getText(R.string.skin_type_title)
         val spannableString = SpannableString(fullText)
         val startIndex = fullText.indexOf("피부타입")
         val endIndex = startIndex + "피부타입".length
@@ -67,9 +67,9 @@ class SelectSkinTypeActivity :
             override fun onTabSelected(tab: TabLayout.Tab) {
                 binding.viewpager2SelectSkinType.currentItem = tab.position
 
-                when(tab.position) {
-                    0 -> binding.btnNext.text = "삭제하기"
-                    else -> binding.btnNext.text = "질문지로 선택 바로가기"
+                when (tab.position) {
+                    0 -> binding.btnNext.text = getString(R.string.delete)
+                    else -> binding.btnNext.text = getString(R.string.go_question)
                 }
             }
 
