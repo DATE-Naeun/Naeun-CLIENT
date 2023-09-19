@@ -11,8 +11,23 @@ import com.naeun_android.util.BindingFragment
 
 class HomeFragment : BindingFragment<FragmentHomeBinding>(R.layout.fragment_home) {
 
+    private lateinit var homeTypePopularAdapter: HomeTypePopularAdapter
+    private lateinit var homeTypeCategoryRecommendAdapter: HomeTypeCategoryRecommendAdapter
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        initPopularAdapter()
+        initCategoryAdapter()
+    }
+
+    private fun initPopularAdapter() {
+        //itemClick 데이터 넣기
+        binding.rvTypePopular.adapter = homeTypePopularAdapter
+    }
+
+    private fun initCategoryAdapter() {
+        //itemClick 데이터 넣기
+        binding.rvTypeCategoryRecommend.adapter = homeTypeCategoryRecommendAdapter
     }
 }
