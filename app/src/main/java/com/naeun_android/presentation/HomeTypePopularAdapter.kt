@@ -19,7 +19,7 @@ class HomeTypePopularAdapter(private val itemClick: (Product) -> (Unit)) :
     }
 
     override fun onBindViewHolder(holder: TypePopularViewHolder, position: Int) {
-        holder.onBind(currentList[position])
+        holder.onBind(getItem(position))
     }
 
     class TypePopularViewHolder(
@@ -36,7 +36,7 @@ class HomeTypePopularAdapter(private val itemClick: (Product) -> (Unit)) :
     }
 
     companion object {
-        val diffUtil = object : DiffUtil.ItemCallback<Product>() {
+        private val diffUtil = object : DiffUtil.ItemCallback<Product>() {
             override fun areItemsTheSame(oldItem: Product, newItem: Product): Boolean {
                 return oldItem.productId == newItem.productId
             }
