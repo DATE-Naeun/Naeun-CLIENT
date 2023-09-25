@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ChoiceChipStyle" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/sel_choice_chip_text</item>
+        <item name="android:textAlignment">center</item>
+
+        <item name="chipCornerRadius">8dp</item>
+        <item name="chipStrokeColor">@color/sel_choice_chip_stroke</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="chipBackgroundColor">@color/sel_choice_chip_background</item>
+    </style>
+
+    <style name="CategoryTextStyle" parent="">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/sel_choice_chip_text</item>
+    </style>
+
+</resources>
