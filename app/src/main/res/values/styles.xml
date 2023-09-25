@@ -13,4 +13,10 @@
         <item name="chipBackgroundColor">@color/sel_choice_chip_background</item>
     </style>
 
+    <style name="CategoryTextStyle" parent="">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/sel_choice_chip_text</item>
+    </style>
+
 </resources>

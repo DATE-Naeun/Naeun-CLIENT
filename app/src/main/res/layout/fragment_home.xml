@@ -8,6 +8,7 @@
     </data>
 
     <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/dl_drawer"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -234,6 +235,18 @@
             </ScrollView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_drawer"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"
+            app:itemShapeAppearanceOverlay="@drawable/rectangle_main_type_50dp"
+            app:itemTextColor="@color/sel_choice_chip_text"
+            app:itemTextAppearance="@style/CategoryTextStyle"
+            app:headerLayout="@layout/nav_category_header"
+            app:menu="@menu/menu_nav_category" />
 
     </androidx.drawerlayout.widget.DrawerLayout>
 </layout>
